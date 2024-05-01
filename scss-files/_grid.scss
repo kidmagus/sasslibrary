@@ -19,6 +19,10 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
   box-sizing: border-box;
 }
 
+.align-center {
+  align-items: center;
+}
+
 .row {
   display: flex;
   flex-flow: row wrap;

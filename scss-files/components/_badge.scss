@@ -4,6 +4,7 @@
   border-radius: $base-border-radius * 4;
   background-color: $bg-color;
   padding: math.div($base-padding, 4) math.div($base-padding, 2);
+
   font-size: $font-size-sm;
   font-weight: normal;
 }
