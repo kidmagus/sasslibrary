@@ -5429,3 +5429,23 @@ img {
 .spacing-3 {
   letter-spacing: 3px;
 }
+
+.fw-sm {
+  font-weight: 400;
+}
+
+.fw-md {
+  font-weight: 500;
+}
+
+.fw-lg {
+  font-weight: 600;
+}
+
+.fw-xl {
+  font-weight: 700;
+}
+
+.fw-xxl {
+  font-weight: 800;
+}

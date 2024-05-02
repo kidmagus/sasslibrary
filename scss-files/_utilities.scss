@@ -166,6 +166,16 @@ $utilities: (
       "3": $base-letter-space + 2,
     ),
   ),
+  "font-weight": (
+    "prefix": "fw",
+    "values": (
+      "sm": $font-weight-sm,
+      "md": $font-weight-md,
+      "lg": $font-weight-lg,
+      "xl": $font-weight-xl,
+      "xxl": $font-weight-xxl,
+    ),
+  ),
 );
 
 //generate utility class
