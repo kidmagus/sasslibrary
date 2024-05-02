@@ -16,7 +16,6 @@ p {
 
 h1 {
   line-height: 40px;
-  letter-spacing: 1px;
 }
 
 h2 {
@@ -26,6 +25,10 @@ h2 {
 ul {
   padding: 0;
   list-style-type: none;
+}
+
+li {
+  list-style: none;
 }
 
 a {
@@ -39,4 +42,8 @@ hr {
 
 img {
   max-width: 100%;
+}
+
+.pointer {
+  cursor: pointer;
 }

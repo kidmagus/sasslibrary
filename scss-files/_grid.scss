@@ -8,6 +8,30 @@ $grid-gaps: (
   "3": 30px,
 );
 
+$gaps: (
+  "0": 0,
+  "1": 10px,
+  "2": 20px,
+  "3": 30px,
+  "4": 40px,
+  "5": 50px,
+  "6": 60px,
+  "7": 70px,
+  "8": 80px,
+  "9": 90px,
+);
+
+@each $key, $val in $gaps {
+  //column-gaps
+  .col-gap-#{$key} {
+    column-gap: $val;
+  }
+  //row-gaps
+  .row-gap-#{$key} {
+    row-gap: $val;
+  }
+}
+
 $layout-values: flex-start, flex-end, center, space-between, space-around;
 
 // base layout classes
@@ -21,6 +45,18 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
 
 .align-center {
   align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .row {
@@ -56,6 +92,10 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
       width: math.div($i * 100%, $grid-columns);
     }
   }
+
+  .container {
+    flex-direction: column;
+  }
 }
 
 @include sm {
@@ -65,6 +105,10 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
       flex-grow: 0;
       width: math.div($i * 100%, $grid-columns);
     }
+  }
+
+  .container {
+    flex-direction: column;
   }
 }
 
@@ -76,6 +120,10 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
       width: math.div($i * 100%, $grid-columns);
     }
   }
+
+  .container {
+    flex-direction: row;
+  }
 }
 
 @include lg {
@@ -85,6 +133,10 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
       flex-grow: 0;
       width: math.div($i * 100%, $grid-columns);
     }
+  }
+
+  .container {
+    flex-direction: row;
   }
 }
 

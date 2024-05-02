@@ -1,0 +1,10 @@
+.input {
+  border: $base-border-thickness solid;
+}
+
+@each $key, $val in $colors {
+  .input-#{$key} {
+    @extend .input;
+    border-color: $val;
+  }
+}
