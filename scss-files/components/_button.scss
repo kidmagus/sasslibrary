@@ -6,6 +6,7 @@
   padding: $base-padding $base-padding * 2;
   border-radius: $base-border-radius;
   background-color: $bg-color;
+  max-width: 100%;
 }
 //if not gonna pass a value -- then use a def value which is #e2e2e2
 .btn {
