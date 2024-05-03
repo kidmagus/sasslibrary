@@ -1,17 +1,19 @@
 @use "sass:math";
 
 $utilities: (
-  "padding": (
-    "prefix": "p",
-    "values": (
-      "0": 0,
-      "1": $base-padding,
-      "2": $base-padding * 2,
-      "3": $base-padding * 4,
-      "4": $base-padding * 6,
-      "5": $base-padding * 8,
+  //property : (map ( key , value) )
+  "padding":
+    (
+      "prefix": "p",
+      "values": (
+        "0": 0,
+        "1": $base-padding,
+        "2": $base-padding * 2,
+        "3": $base-padding * 4,
+        "4": $base-padding * 6,
+        "5": $base-padding * 8,
+      ),
     ),
-  ),
   "padding-left": (
     "prefix": "pl",
     "values": (
@@ -128,7 +130,7 @@ $utilities: (
     ),
   ),
   "border-radius": (
-    "prefix": "br",
+    "prefix": "b-rad",
     "values": (
       "default": $base-border-radius,
       "none": 0,
@@ -176,7 +178,28 @@ $utilities: (
       "xxl": $font-weight-xxl,
     ),
   ),
+  "max-width": (
+    "prefix": "mx-width",
+    "values": (
+      "480": 480px,
+      "768": 768px,
+      "1200": 1200px,
+    ),
+  ),
+  "line-height": (
+    "prefix": "leading",
+    "values": (
+      "none": test,
+    ),
+  )
 );
+$line-height: 10;
+
+@for $i from 1 through $line-height {
+  .leading-#{$i} {
+    line-height: math.div($i * 100px, $line-height);
+  }
+}
 
 //generate utility class
 @each $property, $map in $utilities {
@@ -189,7 +212,9 @@ $utilities: (
         #{$property}: $v;
       }
     } @else {
+      //ml-1
       .#{$prefix}-#{$k} {
+        //margin-left : 1px;
         #{$property}: $v;
       }
     }
